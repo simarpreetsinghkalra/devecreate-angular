@@ -1,0 +1,17 @@
+<h1>Add task</h1>
+<form [formGroup]="taskForm">
+  <div>
+    <label>Name</label>
+    <input formControlName="name" class="form-control" type="text" name="name" />
+  </div>
+  <div class="mt-2">
+    <label>Date</label>
+    <input formControlName="date" class="form-control" type="text" name="name" placeholder="DD-MM-YY" />
+  </div>
+  <div class="mt-2">
+    <label>Time</label>
+    <input formControlName="time" class="form-control" type="text" name="name" placeholder="HH:mm" />
+  </div>
+  <app-button class="mt-2" [buttonText]="'ADD'" [classesStr]="'btn btn-success'" (buttonClick)="addTask()">
+  </app-button>
+</form>
